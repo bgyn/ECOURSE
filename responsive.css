@@ -1,0 +1,273 @@
+@media screen and (max-width: 480px) {
+  :root {
+    --font1: 'Poppins', sans-serif;
+    --font2: 'Roboto', sans-serif;
+    --primary_color: #ff6600;
+  }
+
+  /* header */
+  .header {
+    height: 70px;
+    padding: 0 30px;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    z-index: 2;
+    background-color: white;
+  }
+
+  .header.active {
+    height: 265px;
+  }
+
+  .header .top_bar {
+    display: none;
+  }
+
+  .subjects_menu {
+    display: none;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav_bar {
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav_bar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+  }
+
+  .nav_bar ul li a {
+    font-size: 1.2rem;
+  }
+
+  .nav_bar ul li {
+    padding: 3px 0;
+  }
+
+  .header .nav_bar .mobile_logo {
+    display: inline-block;
+  }
+
+  .nav_bar .mobile_logo a {
+    color: #44425a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .nav_bar .mobile_logo a span {
+    color: var(--primary_color);
+  }
+
+  .nav_bar .mobile_logo a span {
+    color: var(--primary_color);
+  }
+
+  .subjects {
+    display: none;
+  }
+
+  .join_btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: none;
+    border: 2px solid gray;
+    border-radius: 10px;
+  }
+
+  .carousel {
+    height: 30vh;
+  }
+
+  .hamburger .lines {
+    display: flex;
+    width: 30px;
+    height: 2px;
+    background-color: #7f7f7f;
+    margin: 5px 0;
+  }
+
+  /* header */
+
+  /* slider */
+  .wrapper .slider {
+    height: 30vh;
+  }
+
+  .navigation_circle {
+    position: absolute;
+    top: 20%;
+  }
+
+  .navigation_circle .circle {
+    height: 30px;
+    width: 30px;
+  }
+
+  .wrapper .slider .about_slider .sm_title {
+    font-size: .7rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+
+  .wrapper .slider .about_slider .slider_title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  /* slider */
+
+  /* about */
+  #about {
+    margin: 100px 0;
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    flex-direction: column;
+  }
+
+  .image_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+  }
+
+  .about .image_container .about_img {
+    min-width: 300px;
+    margin: 10px 0;
+  }
+
+  .about .text_container .about_us_sm_text {
+    font-size: 1.2rem;
+  }
+
+  .about .text_container .about_us_title {
+    font-size: 2rem;
+  }
+
+  .about .text_container .about_us_decp {
+    font-size: 1.2rem;
+  }
+
+  /* about */
+
+  /* subjects */
+  #subjects {
+    margin: 100px 0;
+  }
+
+  .subjects_wrapper {
+    padding: 0 30px;
+    height: auto;
+  }
+
+  .subjects_wrapper .text_wrap .sm_title {
+    font-size: 1rem;
+  }
+
+  .subjects_wrapper .text_wrap .lg_title {
+    font-size: 1.6rem;
+  }
+
+  .subjects_wrapper .subject_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .subjects_wrapper .subject_container .subject {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* subjects */
+
+  /* courses */
+  .courses_wrapper {
+    padding: 0 30px;
+    height: auto;
+    width: 100%;
+  }
+
+  .courses_wrapper .text_wrap .courses_sm_title {
+    font-size: 1.2rem;
+  }
+
+  .courses_wrapper .text_wrap .courses_lg_title {
+    font-size: 1.75rem;
+  }
+
+  .courses_wrapper .courses_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* courses */
+
+  /* register */
+  .register {
+    height: auto;
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  .register .container {
+    width: 100%;
+  }
+
+  .register .container ul li p {
+    font-size: .9rem;
+  }
+
+  .register .signup {
+    width: 100%;
+  }
+
+  /* register */
+
+  /* teachers */
+  #teachers {
+    padding: 0 30px;
+  }
+
+  .teachers .secondary_text {
+    font-size: .9rem;
+  }
+
+  .teachers .primary_text {
+    font-size: 1.6rem;
+  }
+
+  .teachers .teachers_container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .teachers .teachers_container .teacher {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    z-index: 1;
+  }
+
+  .teachers .teachers_container .teacher .social {
+    height: 80.7%;
+  }
+
+  /* teachers */
+}

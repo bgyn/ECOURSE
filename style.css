@@ -1,0 +1,797 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+i {
+    color: var(--primary_color)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --font1: 'Poppins', sans-serif;
+    --font2: 'Roboto', sans-serif;
+    --primary_color: #FF6600;
+}
+
+.header {
+    width: 100%;
+    height: 165px;
+}
+
+.header .top_bar {
+    padding: 20px 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.header .top_bar .logo a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #44425A;
+
+}
+
+.header .top_bar .logo a span {
+    color: var(--primary_color);
+}
+
+.header .top_bar .container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .top_bar .container .text .text_title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-family: var(--font1);
+}
+
+.header .top_bar .container .fa-solid {
+    color: var(--primary_color);
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.header .top_bar .container .text .sm_text {
+    color: rgb(77, 77, 77);
+}
+
+.nav {
+    border-top: 1px solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+    height: 70px;
+    align-items: center;
+}
+
+.subjects_menu .title_box {
+    width: 280px;
+    height: 70px;
+    background-color: #F2F1F8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.subjects_menu .title_box:hover {
+    background-color: #e2dfff;
+}
+
+.subjects_menu .title_box .title .fa-solid {
+    margin-right: 5px;
+    color: var(--primary_color);
+}
+
+.subjects_menu .title_box .title {
+    color: var(--primary_color);
+}
+
+.subjects_menu .title_box .fa-solid {
+    color: var(--primary_color);
+}
+
+.subjects_links {
+    position: absolute;
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    width: 280px;
+    transition: all .5s ease;
+    cursor: pointer;
+    z-index: 3;
+    top: 24%;
+}
+
+.subjects_links :last-child {
+    border-bottom: none;
+}
+
+.subjects_links li {
+    padding: 5.5px 0;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.subjects_links li a {
+    padding: 0 40px;
+    color: #3c3c3c;
+    font-size: 1.2rem;
+    font-family: var(--font1);
+    font-weight: 600;
+}
+
+.subjects_links.active {
+    height: 200px
+}
+
+.subjects_links :first-child a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subjects_links :first-child .web_design_links {
+    height: 0;
+    overflow-y: hidden;
+    width: 280px;
+    position: absolute;
+    background-color: #F2F1F8;
+    transition: all .5s ease;
+    top: 18%;
+}
+
+.subjects_links li a:hover {
+    color: var(--primary_color);
+}
+
+.subjects_links :first-child .web_design_links li:hover {
+    background-color: white;
+}
+
+.subjects_links :first-child .web_design_links.active {
+    height: 120px
+}
+
+.nav_bar {
+    width: 50%;
+}
+
+.nav_bar .mobile_logo {
+    display: none;
+}
+
+.nav_bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_bar ul li {
+    padding: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger .lines {
+    height: 6px;
+    width: 30px;
+    background-color: white;
+}
+
+.nav_bar ul li a {
+    font-size: 1.3rem;
+    font-family: var(--font1);
+    font-weight: 500;
+    color: #545268;
+    transition: color .3s ease;
+}
+
+.nav_bar ul li .active {
+    color: var(--primary_color);
+}
+
+.nav_bar ul li:hover a {
+    color: var(--primary_color);
+}
+
+.join_btn .btn {
+    width: 110px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--primary_color);
+    color: white;
+    font-family: var(--font1);
+    font-size: 1rem;
+    border: none;
+    transition: background-color .5s ease;
+}
+
+.join_btn:hover .btn {
+    background-color: #e05900;
+}
+
+/* slider */
+.sliders {
+    z-index: -1;
+    overflow: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 300vw;
+    display: flex;
+}
+
+.wrapper .slider {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navigation_circle {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+}
+
+.navigation_circle .circle {
+    border: 5px solid rgb(165, 165, 165);
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(48, 47, 59, 0.8);
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.navigation_circle .circle.active {
+    background-color: var(--primary_color);
+    border: 5px solid white;
+}
+
+.wrapper .carousel-1 {
+    background: url('/img/carousel-1.jpg');
+    width: 100vw;
+}
+
+.wrapper .carousel-2 {
+    background: url('/img/carousel-2.jpg');
+    width: 100vw;
+}
+
+.wrapper .carousel-3 {
+    background: url('/img/carousel-3.jpg');
+    width: 100vw;
+}
+
+.wrapper .slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: 100%;
+}
+
+.wrapper .slider .about_slider {
+    position: absolute;
+    left: 20%;
+}
+
+.wrapper .slider .about_slider .sm_title {
+    font-family: var(--font1);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.wrapper .slider .about_slider .slider_title {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 10px;
+    font-family: var(--font1);
+}
+
+.wrapper .slider .about_slider .learn_btn {
+    width: 110px;
+    height: 50px;
+    background-color: var(--primary_color);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font1);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all .5s;
+}
+
+.wrapper .slider .about_slider .learn_btn:hover {
+    background-color: #e05900;
+}
+
+/* slider */
+
+
+/* about */
+#about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.about .image_container {
+    margin: 0 20px;
+    width: 50%;
+    flex: 1;
+}
+
+.about .image_container .about_img {
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.about .text_ {
+    margin: 0 20px;
+    width: 50%;
+    flex: 2;
+}
+
+.about .text_container .about_us_sm_text {
+    color: var(--primary_color);
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about .text_container .about_us_title {
+    font-family: var(--font1);
+    font-size: 2.5rem;
+    color: #44425A;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.about .text_container .about_us_decp {
+    font-family: var(--font1);
+    color: #6C6A74;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.about .text_container .learn_btn {
+    width: 110px;
+    height: 50px;
+    background-color: var(--primary_color);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font1);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all .5s;
+}
+
+.about .text_container .learn_btn:hover {
+    background-color: #e05900;
+}
+
+/* about */
+
+/* subjects */
+#subjects{
+    margin-bottom: 20px;
+}
+.subjects_wrapper {
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subjects_wrapper .text_wrap .sm_title {
+    font-family: var(--font1);
+    color: var(--primary_color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subjects_wrapper .text_wrap .lg_title {
+    font-family: var(--font1);
+    color: #44425A;
+    font-size: 2.6rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-bottom: 10%;
+}
+
+.subjects_wrapper .subject_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.subjects_wrapper .subject_container .subject {
+    width: 19vw;
+    height: 23vh;
+    height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(36, 35, 35, 0.6);
+}
+
+.subjects_wrapper .subject_container .subject img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+}
+
+.subjects_wrapper .subject_container .subject .subject_title {
+    font-family: var(--font1);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.subjects_wrapper .subject_container .subject .course_count {
+    font-family: var(--font1);
+    color: white;
+}
+
+.subjects_wrapper .subject_container .subject:hover img {
+    transform: scale(1.2);
+}
+
+/* subjects */
+
+/* Courses */
+#courses{
+    margin-bottom: 50px;
+}
+.courses_wrapper {
+    width: 100%;
+    height: 160vh;
+    padding: 0 100px;
+}
+
+.courses_wrapper .text_wrap .courses_sm_title {
+    font-family: var(--font1);
+    color: var(--primary_color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.courses_wrapper .text_wrap .courses_lg_title {
+    font-family: var(--font1);
+    color: #44425A;
+    font-size: 2.6rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.courses_wrapper .courses_container {
+    display: grid;
+    grid-template-columns: repeat(3, 31.5%);
+    justify-content: space-between;
+}
+
+.courses_wrapper .courses_container .course {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    background-color: rgb(242, 241, 248);
+    margin: 15px 0;
+}
+
+.courses_wrapper .courses_container .course img {
+    width: 100%;
+}
+
+.courses_wrapper .courses_container .course .course_description {
+    padding: 20px;
+}
+
+.courses_wrapper .courses_container .course .course_description .top_description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.courses_wrapper .courses_container .course .course_description .top_description .course_time img {
+    width: 15px;
+}
+
+.courses_wrapper .courses_container .course .course_description span {
+    margin-left: 5px;
+    color: #787680;
+}
+
+.courses_wrapper .courses_container .course .course_description .bottom_description .price {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.courses_wrapper .courses_container .course .course_description .course_title:hover {
+    color: #df5c05;
+    text-decoration: underline;
+}
+
+.courses_wrapper .courses_container .course .course_description .course_title {
+    font-family: var(--font1);
+    color: #44425A;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.courses_wrapper .courses_container .course .course_description .bottom_description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.courses_wrapper .courses_container .course .course_description .course_title {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+/* Courses */
+
+/* register */
+#register_course{
+    margin: 100px 0;
+    background-color: rgba(128, 128, 128, 0.2);
+    position: relative;
+    z-index: 1;
+    background-image: url('/img/course-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.register{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 100px;
+    width: 100%;
+    background-color: rgba(2, 2, 2, 0.6);
+    position: relative;
+    z-index: 1;
+}
+.register .container{   
+    flex: 1.6;
+    width: 50%;
+    margin-right: 20px;
+}
+.register .container .secondary_text{
+    color: var(--primary_color);
+    font-family: var(--font1);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.register .container .primary_text{
+    margin: 10px 0;
+    color: white;
+    font-size: 2.5rem;
+    font-family: var(--font1);
+}
+.register .container .paragraph{
+    overflow-wrap: break-word;
+    color: white;
+    font-family: var(--font1);
+    font-size: .9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.register .container ul li {
+    color: white;
+    margin: 20px 0;
+}
+.register .container ul li i{
+    font-size: 1.3rem;
+}
+.register .container ul li p{
+    font-family: var(--font1);
+    display: inline;
+    margin-left: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.register .signup{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.register .signup .form_section{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.register .signup .form_section .primary_text{
+    padding: 20px;
+    color: #44425A;
+    font-size: 2.2rem;
+    text-align: center;
+    font-family: var(--font1);
+    font-weight: bolder;
+}
+.register .form_section .form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary_color);
+    align-items: center;
+    height: 45vh;
+    justify-content: center;
+}
+.register .form_section .form input,select{
+    margin: 10px 0;
+    width: 80%;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.register .form_section .form input::placeholder{
+    color: gray;
+    font-size: 1rem;
+}   
+.register .form_section .form select option{
+    font-size: 1rem;
+    color: black;
+}
+.register .form_section .form select{
+    font-size: 1rem;
+    color: #495057;
+}
+.register .signup .form_section .button{
+    width: 80%;
+    height: 45px;
+    background-color: #44425A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    font-family: var(--font1);
+    font-weight: bold;
+    border: none;
+    margin: 10px 0;
+}
+
+/* register */
+
+/* teacher */
+#teachers{
+    width: 100%;
+    padding: 0 100px;
+    margin: 50px 0;
+}
+.teachers .teachers_container{
+    display: flex;
+    justify-content: space-between;
+}
+.teachers .secondary_text{
+    color: var(--primary_color);
+    font-family: var(--font1);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.teachers .primary_text{
+    color: #44425A;
+    font-size: 2.5rem;
+    font-family: var(--font1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.teachers .teachers_container .teacher{
+    width: 23%;
+    height: 350px;
+    background-color: #F2F1F8;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.teachers .teachers_container .teacher img{
+    width: 100%;
+}
+.teachers .teachers_container .teacher .teacher_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    overflow: hidden;
+}
+.teachers .teachers_container .teacher .teacher_info .teacher_name{
+    color: #44425A;
+    font-family: var(--font1);
+    font-weight: bold;
+}
+.teachers .teachers_container .teacher .teacher_info .teacher_designation{
+    color: #6C6A9D;
+    font-weight: 500;
+    font-size: .9rem;
+    font-family: var(--font1);
+}
+.teachers .teachers_container .teacher .social{
+    position: absolute;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    height: 260px;
+    top: 0;
+    background-color: rgba(70, 69, 88, 0.749);
+    padding: 0 30px;
+    transition: all 2s ease-in;
+}
+.teachers .teachers_container .teacher .social i{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.teachers .teachers_container .teacher .social i:hover{
+    background-color: white;
+    color: black;
+}
+.teachers .teachers_container .teacher:hover .social{
+    display: flex;
+}
+/* teacher */

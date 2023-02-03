@@ -222,7 +222,7 @@
   /* register */
   .register {
     height: auto;
-    flex-direction: column;
+    display: block;
     padding: 50px 30px;
   }
 
